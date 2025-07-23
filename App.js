@@ -8,6 +8,7 @@ import { Provider } from "react-redux";
 import {store} from "./src/stored/store"
 import Checkout from "./src/components/Checkout";
 import Navfooter from "./src/components/Navfooter";
+import ResNav from "./src/components/ResNav";
 
 function App(){
     return(
@@ -21,6 +22,9 @@ function App(){
         <Route element ={<Navfooter/>}>
         <Route path="/restaurants" element={<RestaurantsChains/>}></Route>
         <Route path="/city/noida-1/:id" element={<RestaurantMenu/>}></Route>
+        
+        </Route>
+        <Route element ={<ResNav/>}>
         <Route path="/city/noida-1/:id/search" element={<SearchBox/>}></Route>
         </Route>
         <Route path="/checkout" element={<Checkout ></Checkout>}></Route>
