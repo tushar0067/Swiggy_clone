@@ -6,8 +6,9 @@ import { BrowserRouter,Routes,Route } from "react-router";
 import SearchBox from "./src/components/SearchBox";
 import { Provider } from "react-redux";
 import {store} from "./src/stored/store"
-import ResNav from "./src/components/ResNav";
 import Checkout from "./src/components/Checkout";
+import Navfooter from "./src/components/Navfooter";
+
 function App(){
     return(
 
@@ -15,14 +16,15 @@ function App(){
     <Provider store={store}>   
     <BrowserRouter>
     <Routes>
+        
         <Route path="/" element={<Home></Home>}></Route>
-        <Route element ={<ResNav></ResNav>}>
+        <Route element ={<Navfooter/>}>
         <Route path="/restaurants" element={<RestaurantsChains/>}></Route>
         <Route path="/city/noida-1/:id" element={<RestaurantMenu/>}></Route>
         <Route path="/city/noida-1/:id/search" element={<SearchBox/>}></Route>
         </Route>
         <Route path="/checkout" element={<Checkout ></Checkout>}></Route>
-    
+        
     </Routes>
     </BrowserRouter>
     </Provider>

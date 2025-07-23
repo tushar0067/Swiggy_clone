@@ -1,13 +1,17 @@
 import { Link } from "react-router";
-export default function Header(){
+export default function Header({ onScrollToFooter }) {
+    
     return(
+        
     <header className="bg-[#ff5200] ">
         <div className=" flex justify-between py-8 mx-35 ">
         <img className="w-40 h-12" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/portal/static-assets/images/swiggy_logo_white.png"></img>
         <div className=" font-serif font-bold text-white text-md flex gap-10 items-center">
             <a target="_blank" href="https://www.swiggy.com/corporate/">Swiggy Corporate</a>
             <a target="_blank" href="https://partner.swiggy.com/login#/swiggy">Partner With Us</a>
-            <a  className="border-1 px-3 py-4 rounded-xl" target="_blank" href="https://www.swiggy.com/corporate/">Get the App</a>
+            <button onClick={onScrollToFooter} className="border-2 border-white px-3 py-2 rounded-xl text-white hover:bg-white hover:text-[#ff5200] transition">
+            Get the App
+            </button>
             <a className ="bg-black text-center py-4 px-8 rounded-xl" target="_blank" href="https://www.swiggy.com/corporate/">Sign in</a>
             
         </div>
@@ -41,6 +45,8 @@ export default function Header(){
         </a>
         </div>
     </header>
+    
+   
     );
 }
     

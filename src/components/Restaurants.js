@@ -1,5 +1,6 @@
 export default function Restaurants({ value }) {
     return (
+      <a href={value.cta.link}>
         <div className="w-80 flex-none rounded-2xl border border-gray-300 shadow-md overflow-hidden bg-white">
   {/* Image with overlay */}
   <div className="relative">
@@ -39,7 +40,7 @@ export default function Restaurants({ value }) {
     )}
   </div>
 </div>
-
+</a>
 
     );
 }

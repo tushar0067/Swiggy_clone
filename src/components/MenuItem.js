@@ -42,22 +42,22 @@ export default  function MenuItem({value}){
            {
   count === 0 ? (
     <button
-      className="absolute bottom-1 left-8 bg-gray-100 px-7 py-2 rounded-xl z-30 text-green-700 font-extrabold transition transform duration-200 hover:bg-gray-300"
+      className="absolute w-30 bottom-1 left-4 bg-gray-200 px-7 py-2 rounded-xl  text-green-700 font-extrabold transition transform duration-200 hover:bg-gray-300"
       onClick={handleAddItems}
     >
       ADD
     </button>
   ) : (
-    <div className="flex gap-2 absolute bottom-1 left-8 z-30">
+    <div className="flex gap-2 w-30 absolute bottom-1 justify-center items-center bg-gray-200 left-4  rounded-lg ">
       <button
-        className="bg-gray-100 px-3 py-2 rounded-xl text-green-700 font-extrabold transition transform duration-200 hover:bg-gray-300"
+        className=" px-3 py-2 rounded-xl text-green-700 font-extrabold transition transform duration-200 hover:bg-gray-300"
         onClick={handleDecrementItmes}
       >
         -
       </button>
-      <span className="text-2xl font-bold text-green-700">{count}</span>
+      <span className="text-2xl  font-bold text-green-700">{count}</span>
       <button
-        className="bg-gray-100 px-3 py-2 rounded-xl text-green-700 font-extrabold transition transform duration-200 hover:bg-gray-300"
+        className=" px-3 py-2 rounded-xl text-green-700 font-extrabold transition transform duration-200 hover:bg-gray-300"
         onClick={handleIncrementItmes}
       >
         +
